@@ -27,14 +27,17 @@ The architecture of the mini honeynet in Azure consists of the following compone
 - Azure Storage Account
 - Microsoft Sentinel
 
-For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
+For the "BEFORE" metrics, all resources were originally deployed and exposed to the Internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources were deployed with public endpoints visible to the Internet—aka, there was no use for Private Endpoints.
 
-For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
+For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic except my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
 
 ## Attack Maps Before Hardening / Security Controls
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+![(before)-nsg-malicious-allowed-in](https://github.com/molson20/Azure-SOC/assets/145723812/a13274f4-e567-4351-99ea-21aee01de2ff)
+
+![(before)-linux-ssh-auth-fail](https://github.com/molson20/Azure-SOC/assets/145723812/efc1fc47-757b-4bbd-b945-852d73fd8d95)
+
+![(before)-windows-rdp-auth-fail](https://github.com/molson20/Azure-SOC/assets/145723812/4957e225-7c79-48ac-865b-82d12cbf4b56)
+
 
 ## Metrics Before Hardening / Security Controls
 
